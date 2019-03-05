@@ -1,4 +1,4 @@
 FROM ubuntu:latest
-COPY sysbench.sh sysbench.sh
-CMD chmod +x sysbench.sh
-CMD ./sysbench.sh
+COPY . /usr/src/ocss
+WORKDIR /usr/src/ocss
+ENTRYPOINT ["./sysbench.sh"]
