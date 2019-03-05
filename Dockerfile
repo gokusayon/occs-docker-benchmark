@@ -1,4 +1,5 @@
 FROM ubuntu:latest
 COPY . /usr/src/ocss
 WORKDIR /usr/src/ocss
-ENTRYPOINT ["./benchmark.sh"]
+RUN chmod +x sysbench.sh
+ENTRYPOINT ["sysbench.sh"]
